@@ -10,15 +10,15 @@ import { defineConfig, devices } from '@playwright/test';
 const config = ({
   testDir: './tests',
   //1. default timeout is 30s. if page isn't laoded in 30s it will timeout.
-  timeout : 120 * 1000, // 2. this is applicable to every step
+  timeout : 30 * 1000, // 2. this is applicable to every step
   expect : {
-    timeout : 150 * 1000, //3. applicable exclusively for assertion validations
+    timeout : 50 * 1000, //3. applicable exclusively for assertion validations
   },
   //5. when we want to see the reporting in HTML, see 'reposrter'
   reporter : 'html',
     use: {
     //4. which browser to run, we'll use 'object'
-      browserName : 'webkit',
+      browserName : 'chromium',
 
       /* Force it to open your local Brave browser instead of default Chromium/Edge */
       //launchOptions: {
